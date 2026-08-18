@@ -624,7 +624,6 @@
   </div>
 </div>
 
-
   <!-- 6. Vulnerability Analysis -->
   <div class="category" data-cat="vuln">
     <div class="cat-header" onclick="toggleCat(this)">
@@ -634,71 +633,293 @@
       <span class="cat-toggle open">▼</span>
     </div>
     <div class="tools-grid">
-      <div class="tool-card"><div class="tool-name">openvas</div><div class="tool-desc">Greenbone Vulnerability Manager — scanner kerentanan enterprise open source dengan 50.000+ vulnerability test.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">nmap-vulners</div><div class="tool-desc">Script Nmap (NSE) yang mengambil data versi service dan mencocokkannya dengan database Vulners.com.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">legion</div><div class="tool-desc">GUI modular untuk Nmap/masscan yang semi-otomatis; menemukan host dan langsung mengeksekusi tool analisis spesifik.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">openvas</div>
+        <div class="tool-desc">Greenbone Vulnerability Manager — scanner kerentanan enterprise open source dengan 50.000+ vulnerability test.</div>
+        <div class="tool-cmd">gvm-cli --gmp-username admin --gmp-password admin socket --xml "&lt;get_tasks/&gt;"</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">nmap-vulners</div>
+        <div class="tool-desc">Script Nmap (NSE) yang mengambil data versi service dan mencocokkannya dengan database Vulners.com.</div>
+        <div class="tool-cmd">nmap -sV --script vulners 192.168.1.1</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">legion</div>
+        <div class="tool-desc">GUI modular untuk Nmap/masscan yang semi-otomatis; menemukan host dan langsung mengeksekusi tool analisis spesifik.</div>
+        <div class="tool-cmd">legion</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
       <!-- Web Vulnerability -->
-      <div class="tool-card"><div class="tool-name">nuclei-templates</div><div class="tool-desc">Koleksi ribuan template YAML komunitas untuk Nuclei — mencakup deteksi CVE terbaru, misconfiguration, exposed panels, default credentials, dan teknologi fingerprinting yang terus diperbarui oleh ribuan kontributor keamanan di seluruh dunia.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">nuclei-templates</div>
+        <div class="tool-desc">Koleksi ribuan template YAML komunitas untuk Nuclei — mencakup deteksi CVE terbaru, misconfiguration, exposed panels, default credentials, dan teknologi fingerprinting yang terus diperbarui oleh ribuan kontributor keamanan di seluruh dunia.</div>
+        <div class="tool-cmd">nuclei -u https://example.com -t cves/</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">trivy</div><div class="tool-desc">Scanner kerentanan komprehensif untuk container dan infrastruktur — mendeteksi CVE di OS packages, library bahasa pemrograman, Dockerfile misconfig, dan Kubernetes manifest dalam satu tool yang ringan dan mudah diintegrasikan ke CI/CD.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">trivy</div>
+        <div class="tool-desc">Scanner kerentanan komprehensif untuk container dan infrastruktur — mendeteksi CVE di OS packages, library bahasa pemrograman, Dockerfile misconfig, dan Kubernetes manifest dalam satu tool yang ringan dan mudah diintegrasikan ke CI/CD.</div>
+        <div class="tool-cmd">trivy image alpine:latest</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">grype</div><div class="tool-desc">Vulnerability scanner untuk container image dan filesystem — mengidentifikasi kerentanan di packages yang terinstall dalam image Docker dengan database dari NVD, GitHub Advisory, dan sumber lainnya yang diperbarui secara berkala.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">grype</div>
+        <div class="tool-desc">Vulnerability scanner untuk container image dan filesystem — mengidentifikasi kerentanan di packages yang terinstall dalam image Docker dengan database dari NVD, GitHub Advisory, dan sumber lainnya yang diperbarui secara berkala.</div>
+        <div class="tool-cmd">grype ubuntu:latest</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">syft</div><div class="tool-desc">Tool untuk menghasilkan Software Bill of Materials (SBOM) dari container image dan filesystem — mendaftar semua package dan library yang terinstall sebagai langkah awal sebelum vulnerability scanning dengan grype atau trivy.</div><span class="tool-tag tag-analysis">Analysis</span></div>
+      <div class="tool-card">
+        <div class="tool-name">syft</div>
+        <div class="tool-desc">Tool untuk menghasilkan Software Bill of Materials (SBOM) dari container image dan filesystem — mendaftar semua package dan library yang terinstall sebagai langkah awal sebelum vulnerability scanning dengan grype atau trivy.</div>
+        <div class="tool-cmd">syft alpine:latest -o json &gt; sbom.json</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
 
-<!-- Network Vulnerability -->
-      <div class="tool-card"><div class="tool-name">retina</div><div class="tool-desc">Network vulnerability scanner enterprise dari BeyondTrust — melakukan assessment kerentanan komprehensif terhadap host, aplikasi web, dan database dengan laporan remediation yang detail dan terstruktur berdasarkan tingkat risiko.</div><span class="tool-tag tag-active">Active</span></div>
+      <!-- Network Vulnerability -->
+      <div class="tool-card">
+        <div class="tool-name">retina</div>
+        <div class="tool-desc">Network vulnerability scanner enterprise dari BeyondTrust — melakukan assessment kerentanan komprehensif terhadap host, aplikasi web, dan database dengan laporan remediation yang detail dan terstruktur berdasarkan tingkat risiko.</div>
+        <div class="tool-cmd">retinacmd -h 192.168.1.1 -u admin -p password</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">nexpose</div><div class="tool-desc">Vulnerability management platform dari Rapid7 — melakukan scanning, prioritisasi, dan tracking kerentanan secara terus-menerus dengan integrasi langsung ke Metasploit untuk validasi dan eksploitasi kerentanan yang ditemukan.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">nexpose</div>
+        <div class="tool-desc">Vulnerability management platform dari Rapid7 — melakukan scanning, prioritisasi, dan tracking kerentanan secara terus-menerus dengan integrasi langsung ke Metasploit untuk validasi dan eksploitasi kerentanan yang ditemukan.</div>
+        <div class="tool-cmd">systemctl start nexposeengine</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">qualys</div><div class="tool-desc">Cloud-based vulnerability management platform — melakukan continuous monitoring dan assessment kerentanan dari infrastruktur hingga aplikasi web dengan laporan compliance yang komprehensif untuk berbagai standar keamanan industri.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">qualys</div>
+        <div class="tool-desc">Cloud-based vulnerability management platform — melakukan continuous monitoring dan assessment kerentanan dari infrastruktur hingga aplikasi web dengan laporan compliance yang komprehensif untuk berbagai standar keamanan industri.</div>
+        <div class="tool-cmd">qualys-cloud-agent --status</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">sn1per</div><div class="tool-desc">Automated penetration testing framework yang mengintegrasikan puluhan tools recon dan vulnerability scanning — melakukan attack surface discovery, port scanning, web vulnerability testing, dan reporting secara otomatis dalam satu pipeline.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">sn1per</div>
+        <div class="tool-desc">Automated penetration testing framework yang mengintegrasikan puluhan tools recon dan vulnerability scanning — melakukan attack surface discovery, port scanning, web vulnerability testing, dan reporting secara otomatis dalam satu pipeline.</div>
+        <div class="tool-cmd">sniper -t example.com -m stealth</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-<!-- Fuzzing -->
-      <div class="tool-card"><div class="tool-name">afl++</div><div class="tool-desc">American Fuzzy Lop Plus Plus — coverage-guided fuzzer terdepan untuk menemukan bug dan kerentanan memori di program C/C++ — menggunakan instrumentasi compile-time dan algoritma genetik untuk menghasilkan input yang memaksimalkan coverage kode.</div><span class="tool-tag tag-active">Active</span></div>
+      <!-- Fuzzing -->
+      <div class="tool-card">
+        <div class="tool-name">afl++</div>
+        <div class="tool-desc">American Fuzzy Lop Plus Plus — coverage-guided fuzzer terdepan untuk menemukan bug dan kerentanan memori di program C/C++ — menggunakan instrumentasi compile-time dan algoritma genetik untuk menghasilkan input yang memaksimalkan coverage kode.</div>
+        <div class="tool-cmd">afl-fuzz -i input_dir -o output_dir -- ./target_app @@</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">libfuzzer</div><div class="tool-desc">In-process coverage-guided fuzzing engine dari LLVM — terintegrasi langsung dengan kode target untuk fuzzing komponen library dengan kecepatan tinggi, digunakan oleh Google dan banyak perusahaan besar untuk menemukan bug keamanan kritis.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">libfuzzer</div>
+        <div class="tool-desc">In-process coverage-guided fuzzing engine dari LLVM — terintegrasi langsung dengan kode target untuk fuzzing komponen library dengan kecepatan tinggi, digunakan oleh Google dan banyak perusahaan besar untuk menemukan bug keamanan kritis.</div>
+        <div class="tool-cmd">clang -fsanitize=fuzzer target.c -o fuzzer &amp;&amp; ./fuzzer</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">radamsa</div><div class="tool-desc">General-purpose fuzzer untuk menguji ketahanan program terhadap input yang malformed — menghasilkan variasi input acak yang cerdas berdasarkan sample valid, sangat mudah digunakan tanpa konfigurasi kompleks untuk fuzzing black-box.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">radamsa</div>
+        <div class="tool-desc">General-purpose fuzzer untuk menguji ketahanan program terhadap input yang malformed — menghasilkan variasi input acak yang cerdas berdasarkan sample valid, sangat mudah digunakan tanpa konfigurasi kompleks untuk fuzzing black-box.</div>
+        <div class="tool-cmd">echo "sample input" | radamsa</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-<!-- Configuration & Compliance -->
-      <div class="tool-card"><div class="tool-name">inspec</div><div class="tool-desc">Framework compliance-as-code dari Chef — menulis aturan keamanan sebagai kode Ruby untuk mengaudit konfigurasi server, container, dan cloud secara otomatis terhadap standar CIS Benchmark, STIG, PCI-DSS, dan HIPAA.</div><span class="tool-tag tag-defensive">Defensive</span></div>
+      <!-- Configuration & Compliance -->
+      <div class="tool-card">
+        <div class="tool-name">inspec</div>
+        <div class="tool-desc">Framework compliance-as-code dari Chef — menulis aturan keamanan sebagai kode Ruby untuk mengaudit konfigurasi server, container, dan cloud secara otomatis terhadap standar CIS Benchmark, STIG, PCI-DSS, dan HIPAA.</div>
+        <div class="tool-cmd">inspec exec https://github.com/dev-sec/linux-baseline</div>
+        <span class="tool-tag tag-defensive">Defensive</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">oscap</div><div class="tool-desc">OpenSCAP — implementasi open source dari protokol SCAP untuk audit keamanan dan compliance — memvalidasi konfigurasi sistem terhadap security baseline NIST, CIS, dan standar industri lainnya dengan laporan HTML yang komprehensif.</div><span class="tool-tag tag-defensive">Defensive</span></div>
+      <div class="tool-card">
+        <div class="tool-name">oscap</div>
+        <div class="tool-desc">OpenSCAP — implementasi open source dari protokol SCAP untuk audit keamanan dan compliance — memvalidasi konfigurasi sistem terhadap security baseline NIST, CIS, dan standar industri lainnya dengan laporan HTML yang komprehensif.</div>
+        <div class="tool-cmd">oscap xccdf eval --report report.html /usr/share/xml/scap/ssg/content/ssg-debian10-ds.xml</div>
+        <span class="tool-tag tag-defensive">Defensive</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">hardening-check</div><div class="tool-desc">Script audit konfigurasi keamanan Linux — memeriksa ratusan parameter hardening seperti kernel parameters, file permissions, service yang berjalan, dan konfigurasi SSH untuk memastikan sistem sudah dikonfigurasi sesuai best practice keamanan.</div><span class="tool-tag tag-defensive">Defensive</span></div>
+      <div class="tool-card">
+        <div class="tool-name">hardening-check</div>
+        <div class="tool-desc">Script audit konfigurasi keamanan Linux — memeriksa ratusan parameter hardening seperti kernel parameters, file permissions, service yang berjalan, dan konfigurasi SSH untuk memastikan sistem sudah dikonfigurasi sesuai best practice keamanan.</div>
+        <div class="tool-cmd">hardening-check /usr/bin/ls</div>
+        <span class="tool-tag tag-defensive">Defensive</span>
+      </div>
 
-<!-- Specific Technology -->
-      <div class="tool-card"><div class="tool-name">sqlmap-tamper</div><div class="tool-desc">Koleksi tamper script untuk sqlmap — memodifikasi payload SQL injection secara otomatis untuk melewati berbagai jenis Web Application Firewall dan filter input yang memblokir teknik injeksi standar.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">testssl</div><div class="tool-desc">Shell script komprehensif untuk testing konfigurasi SSL/TLS dari command line — memeriksa protocol support, cipher order, certificate validity, dan 100+ kerentanan SSL/TLS tanpa dependensi library khusus selain openssl.</div><span class="tool-tag tag-active">Active</span></div>
+      <!-- Specific Technology -->
+      <div class="tool-card">
+        <div class="tool-name">sqlmap-tamper</div>
+        <div class="tool-desc">Koleksi tamper script untuk sqlmap — memodifikasi payload SQL injection secara otomatis untuk melewati berbagai jenis Web Application Firewall dan filter input yang memblokir teknik injeksi standar.</div>
+        <div class="tool-cmd">sqlmap -u "http://example.com/item.php?id=1" --tamper=space2comment</div>
+        <span class="tool-tag tag-offensive">Offensive</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">retire.js</div><div class="tool-desc">Scanner untuk mendeteksi penggunaan library JavaScript yang rentan di aplikasi web — mengidentifikasi versi jQuery, Angular, Bootstrap, dan ratusan library JS lainnya yang memiliki kerentanan keamanan yang diketahui.</div><span class="tool-tag tag-analysis">Analysis</span></div>
+      <div class="tool-card">
+        <div class="tool-name">testssl</div>
+        <div class="tool-desc">Shell script komprehensif untuk testing konfigurasi SSL/TLS dari command line — memeriksa protocol support, cipher order, certificate validity, dan 100+ kerentanan SSL/TLS tanpa dependensi library khusus selain openssl.</div>
+        <div class="tool-cmd">testssl https://example.com</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">dependency-check</div><div class="tool-desc">OWASP Dependency Check — menganalisis dependensi proyek software untuk menemukan komponen dengan kerentanan yang diketahui publik (CVE) — mendukung Java, .NET, Python, Ruby, Node.js, dan berbagai bahasa pemrograman lainnya.</div><span class="tool-tag tag-analysis">Analysis</span></div>
+      <div class="tool-card">
+        <div class="tool-name">retire.js</div>
+        <div class="tool-desc">Scanner untuk mendeteksi penggunaan library JavaScript yang rentan di aplikasi web — mengidentifikasi versi jQuery, Angular, Bootstrap, dan ratusan library JS lainnya yang memiliki kerentanan keamanan yang diketahui.</div>
+        <div class="tool-cmd">retire --path ./web_project_folder</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">bandit</div><div class="tool-desc">Static Application Security Testing (SAST) tool untuk kode Python — menganalisis source code Python untuk menemukan masalah keamanan umum seperti hardcoded password, SQL injection, penggunaan fungsi berbahaya, dan konfigurasi SSL yang lemah.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">sparta</div><div class="tool-desc">Versi klasik dari Legion — GUI tool network discovery dan vulnerability assessment yang menyederhanakan tahap scanning.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">gvm</div><div class="tool-desc">Greenbone Vulnerability Management (backend framework dari OpenVAS) untuk orkestrasi scanning skala enterprise.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">bed</div><div class="tool-desc">Bruteforce Exploit Detector — plain-text protocol fuzzer (HTTP, FTP, SMTP) untuk mencari software bugs.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">cisco-auditing-tool</div><div class="tool-desc">Scanner kerentanan khusus router cisco: tebak password umum, cek bug IOS lama, dan masalah konfigurasi umum.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">dotdotpwn</div><div class="tool-desc">Fuzzer cerdas untuk menemukan kerentanan Directory Traversal pada HTTP, FTP, TFTP, dan modul payload custom.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">vuls</div><div class="tool-desc">Agentless vulnerability scanner untuk Linux dan FreeBSD yang otomatis mengaitkan instalasi paket dengan NVD CVE.</div><span class="tool-tag tag-defensive">Defensive</span></div>
+      <div class="tool-card">
+        <div class="tool-name">dependency-check</div>
+        <div class="tool-desc">OWASP Dependency Check — menganalisis dependensi proyek software untuk menemukan komponen dengan kerentanan yang diketahui publik (CVE) — mendukung Java, .NET, Python, Ruby, Node.js, dan berbagai bahasa pemrograman lainnya.</div>
+        <div class="tool-cmd">dependency-check --project "MyProject" --scan ./src</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
 
-      <div class="tool-card"><div class="tool-name">nessus</div><div class="tool-desc">Scanner kerentanan komersial terpopuler — compliance check, patch audit, dan vulnerability assessment komprehensif.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">lynis</div><div class="tool-desc">Security auditing tool untuk sistem Unix/Linux — memeriksa hardening, konfigurasi, dan kepatuhan security policy.</div><span class="tool-tag tag-defensive">Defensive</span></div>
-      <div class="tool-card"><div class="tool-name">unix-privesc-check</div><div class="tool-desc">Script yang memeriksa kemungkinan privilege escalation pada sistem Unix/Linux melalui misconfig umum.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">davtest</div><div class="tool-desc">Testing server WebDAV untuk menentukan file tipe apa yang bisa diupload dan dieksekusi oleh server.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">doona</div><div class="tool-desc">Network protocol fuzzer berbasis BED — mengirim data malformed ke service untuk menemukan crash dan buffer overflow.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">sfuzz</div><div class="tool-desc">Simple network fuzzer ringan untuk menguji protokol jaringan dan mencari kerentanan dengan input tak terduga.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">vulscan</div><div class="tool-desc">Script NSE Nmap untuk vulnerability scanning lanjutan — mencocokkan versi service yang ditemukan dengan database CVE offline dari berbagai sumber seperti NVD, OSVDB, dan SecurityFocus.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">vulhub</div><div class="tool-desc">Kumpulan environment Docker siap pakai untuk reproduksi CVE populer — memungkinkan pentester menguji dan memahami kerentanan nyata dalam lingkungan terisolasi tanpa setup kompleks.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">gitleaks-action</div><div class="tool-desc">Scanner secret dan credential yang terintegrasi CI/CD — secara otomatis mendeteksi API key, token, dan password yang tidak sengaja dicommit ke repositori git sebelum masuk ke production.</div><span class="tool-tag tag-defensive">Defensive</span></div>
-      <div class="tool-card"><div class="tool-name">kubescape</div><div class="tool-desc">Tool scanning keamanan Kubernetes komprehensif — mengevaluasi cluster Kubernetes terhadap framework keamanan NSA, MITRE ATT&CK, dan CIS Benchmark untuk menemukan misconfiguration kritis.</div><span class="tool-tag tag-active">Active</span></div>
-      <div class="tool-card"><div class="tool-name">checkov</div><div class="tool-desc">Static analysis tool untuk Infrastructure as Code — memindai konfigurasi Terraform, CloudFormation, Kubernetes, dan Dockerfile untuk menemukan misconfiguration keamanan sebelum deployment.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">nuclei-burp</div><div class="tool-desc">Plugin Burp Suite untuk menjalankan template Nuclei langsung dari proxy — memindai target yang sedang diuji secara manual dengan ribuan template komunitas tanpa berpindah tool.</div><span class="tool-tag tag-active">Active</span></div>
+      <div class="tool-card">
+        <div class="tool-name">bandit</div>
+        <div class="tool-desc">Static Application Security Testing (SAST) tool untuk kode Python — menganalisis source code Python untuk menemukan masalah keamanan umum seperti hardcoded password, SQL injection, penggunaan fungsi berbahaya, dan konfigurasi SSL yang lemah.</div>
+        <div class="tool-cmd">bandit -r ./my_python_code/</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">sparta</div>
+        <div class="tool-desc">Versi klasik dari Legion — GUI tool network discovery dan vulnerability assessment yang menyederhanakan tahap scanning.</div>
+        <div class="tool-cmd">sparta</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">gvm</div>
+        <div class="tool-desc">Greenbone Vulnerability Management (backend framework dari OpenVAS) untuk orkestrasi scanning skala enterprise.</div>
+        <div class="tool-cmd">gvm-check-setup</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">bed</div>
+        <div class="tool-desc">Bruteforce Exploit Detector — plain-text protocol fuzzer (HTTP, FTP, SMTP) untuk mencari software bugs.</div>
+        <div class="tool-cmd">bed -s HTTP -t 192.168.1.1 -p 80</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">cisco-auditing-tool</div>
+        <div class="tool-desc">Scanner kerentanan khusus router cisco: tebak password umum, cek bug IOS lama, dan masalah konfigurasi umum.</div>
+        <div class="tool-cmd">CAT -h 192.168.1.1 -w /usr/share/wordlists/passwords.txt</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">dotdotpwn</div>
+        <div class="tool-desc">Fuzzer cerdas untuk menemukan kerentanan Directory Traversal pada HTTP, FTP, TFTP, dan modul payload custom.</div>
+        <div class="tool-cmd">dotdotpwn -m http -h 192.168.1.1 -M GET</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">vuls</div>
+        <div class="tool-desc">Agentless vulnerability scanner untuk Linux dan FreeBSD yang otomatis mengaitkan instalasi paket dengan NVD CVE.</div>
+        <div class="tool-cmd">vuls scan</div>
+        <span class="tool-tag tag-defensive">Defensive</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">nessus</div>
+        <div class="tool-desc">Scanner kerentanan komersial terpopuler — compliance check, patch audit, dan vulnerability assessment komprehensif.</div>
+        <div class="tool-cmd">systemctl start nessusd</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">lynis</div>
+        <div class="tool-desc">Security auditing tool untuk sistem Unix/Linux — memeriksa hardening, konfigurasi, dan kepatuhan security policy.</div>
+        <div class="tool-cmd">lynis audit system</div>
+        <span class="tool-tag tag-defensive">Defensive</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">unix-privesc-check</div>
+        <div class="tool-desc">Script yang memeriksa kemungkinan privilege escalation pada sistem Unix/Linux melalui misconfig umum.</div>
+        <div class="tool-cmd">unix-privesc-check standard</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">davtest</div>
+        <div class="tool-desc">Testing server WebDAV untuk menentukan file tipe apa yang bisa diupload dan dieksekusi oleh server.</div>
+        <div class="tool-cmd">davtest -url http://example.com/webdav</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">doona</div>
+        <div class="tool-desc">Network protocol fuzzer berbasis BED — mengirim data malformed ke service untuk menemukan crash dan buffer overflow.</div>
+        <div class="tool-cmd">doona -m HTTP -t 192.168.1.1</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">sfuzz</div>
+        <div class="tool-desc">Simple network fuzzer ringan untuk menguji protokol jaringan dan mencari kerentanan dengan input tak terduga.</div>
+        <div class="tool-cmd">sfuzz -S 192.168.1.1 -p 80 -f sample.pcap</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">vulscan</div>
+        <div class="tool-desc">Script NSE Nmap untuk vulnerability scanning lanjutan — mencocokkan versi service yang ditemukan dengan database CVE offline dari berbagai sumber seperti NVD, OSVDB, dan SecurityFocus.</div>
+        <div class="tool-cmd">nmap -sV --script=vulscan/vulscan.nse 192.168.1.1</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">vulhub</div>
+        <div class="tool-desc">Kumpulan environment Docker siap pakai untuk reproduksi CVE populer — memungkinkan pentester menguji dan memahami kerentanan nyata dalam lingkungan terisolasi tanpa setup kompleks.</div>
+        <div class="tool-cmd">docker-compose up -d</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">gitleaks-action</div>
+        <div class="tool-desc">Scanner secret dan credential yang terintegrasi CI/CD — secara otomatis mendeteksi API key, token, dan password yang tidak sengaja dicommit ke repositori git sebelum masuk ke production.</div>
+        <div class="tool-cmd">gitleaks detect --source . -v</div>
+        <span class="tool-tag tag-defensive">Defensive</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">kubescape</div>
+        <div class="tool-desc">Tool scanning keamanan Kubernetes komprehensif — mengevaluasi cluster Kubernetes terhadap framework keamanan NSA, MITRE ATT&amp;CK, dan CIS Benchmark untuk menemukan misconfiguration kritis.</div>
+        <div class="tool-cmd">kubescape scan framework nsa</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">checkov</div>
+        <div class="tool-desc">Static analysis tool untuk Infrastructure as Code — memindai konfigurasi Terraform, CloudFormation, Kubernetes, dan Dockerfile untuk menemukan misconfiguration keamanan sebelum deployment.</div>
+        <div class="tool-cmd">checkov -d ./tf_files/</div>
+        <span class="tool-tag tag-analysis">Analysis</span>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-name">nuclei-burp</div>
+        <div class="tool-desc">Plugin Burp Suite untuk menjalankan template Nuclei langsung dari proxy — memindai target yang sedang diuji secara manual dengan ribuan template komunitas tanpa berpindah tool.</div>
+        <div class="tool-cmd">java -jar burp-nuclei-extension.jar</div>
+        <span class="tool-tag tag-active">Active</span>
+      </div>
     </div>
   </div>
+
 
   <!-- 7. Sniffing & Spoofing -->
   <div class="category" data-cat="sniffing">
