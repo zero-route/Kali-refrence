@@ -516,105 +516,114 @@
       <div class="tool-card"><div class="tool-name">commix</div><div class="tool-desc">Otomasi deteksi dan eksploitasi command injection — mencoba berbagai teknik bypass untuk mengeksekusi perintah OS.</div><div class="tool-cmd">commix -u "https://target.com/page?cmd=whoami"</div><span class="tool-tag tag-offensive">Offensive</span></div>
       </div>
     </div>
-
-    <!-- 5. Exploitation -->
-    <div class="category" data-cat="exploitation">
-    <div class="cat-header" onclick="toggleCat(this)">
-      <span class="cat-icon">💉</span>
-      <span class="cat-title">Exploitation Tools</span>
-      <span class="cat-count">42</span>
-      <span class="cat-toggle open">▼</span>
-    </div>
-    <div class="tools-grid">
-     <div class="tool-card"><div class="tool-name">metasploit</div><div class="tool-desc">Framework exploit terlengkap di dunia — database ribuan exploit, payload, auxiliary, dan post-exploitation module yang terus diupdate.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">routersploit</div><div class="tool-desc">Framework eksploitasi mirip Metasploit yang didedikasikan khusus untuk embedded devices, seperti router dan kamera CCTV.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">pocsuite3</div><div class="tool-desc">Framework pengembangan exploit open-source yang elegan, digunakan secara luas oleh tim security.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <!-- Framework & Platform -->
-      <div class="tool-card"><div class="tool-name">sqlninja</div><div class="tool-desc">Eksploitasi SQL injection khusus untuk Microsoft SQL Server — mengotomasi teknik lanjutan seperti upload file, OS command execution, dan privilege escalation melalui celah SQLi di aplikasi web berbasis MSSQL.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">ysoserial</div><div class="tool-desc">Generator payload Java deserialization — membuat payload berbahaya untuk mengeksploitasi kerentanan deserialisasi pada aplikasi Java seperti Jenkins, WebLogic, JBoss, dan framework berbasis Java lainnya.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">ysoserial.net</div><div class="tool-desc">Versi .NET dari ysoserial — generate payload deserialisasi untuk aplikasi berbasis .NET seperti ASP.NET, ViewState, dan berbagai formatter .NET yang rentan terhadap serangan deserialisasi objek.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-<!-- Buffer Overflow & Memory -->
-      <div class="tool-card"><div class="tool-name">pwntools</div><div class="tool-desc">Framework CTF dan exploit development berbasis Python — menyediakan library lengkap untuk menulis exploit buffer overflow, ROP chain, format string, dan interaksi dengan binary secara programatik dari terminal Kali.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">ropper</div><div class="tool-desc">ROP (Return Oriented Programming) gadget finder — mencari gadget instruksi dalam binary untuk menyusun ROP chain yang digunakan dalam eksploitasi modern yang melewati proteksi NX/DEP pada aplikasi dan kernel.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">ropgadget</div><div class="tool-desc">Tool pencari ROP dan JOP gadget pada binary ELF, PE, Mach-O — menganalisis binary untuk menemukan urutan instruksi yang bisa dirantai menjadi payload eksploitasi tanpa membutuhkan kode shellcode baru.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">one_gadget</div><div class="tool-desc">Mencari gadget satu instruksi di libc yang langsung menjalankan shell — mempercepat proses exploit development CTF dan binary exploitation dengan menemukan offset shell execution di library C secara otomatis.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">checksec</div><div class="tool-desc">Menganalisis proteksi keamanan yang aktif pada binary — mendeteksi ada tidaknya ASLR, NX, PIE, stack canary, RELRO, dan FORTIFY sehingga pentester bisa menentukan teknik eksploitasi yang tepat sebelum menyerang.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-
-      <div class="tool-card"><div class="tool-name">pattern_create / pattern_offset</div><div class="tool-desc">Utilitas dari Metasploit untuk membuat cyclic pattern dan menentukan offset tepat saat eksploitasi buffer overflow — membantu menemukan titik kontrol EIP/RIP secara presisi tanpa perlu perhitungan manual yang memakan waktu.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-
-<!-- Payload & Shellcode -->
-      <div class="tool-card"><div class="tool-name">shellnoob</div><div class="tool-desc">Toolkit untuk memudahkan penulisan dan konversi shellcode — mengkonversi antara format asm, hex, binary, dan C secara otomatis serta membantu debugging shellcode selama proses exploit development di berbagai arsitektur.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">donut</div><div class="tool-desc">Generator shellcode dari executable .NET, PE, VBScript, dan JScript — mengkonversi payload apapun menjadi shellcode yang bisa diinjeksikan ke proses lain untuk bypass antivirus dan eksekusi in-memory tanpa menyentuh disk.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">sharpshooter</div><div class="tool-desc">Framework pembuatan payload yang memanfaatkan teknik DotNetToJScript untuk eksekusi kode .NET melalui berbagai format file seperti HTA, JS, VBS, dan WSF — efektif untuk bypass application whitelisting di lingkungan Windows.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">unicorn</div><div class="tool-desc">Tool sederhana namun powerful untuk mengkonversi shellcode Metasploit atau custom menjadi serangan PowerShell — menggunakan teknik PowerShell downgrade attack dan injeksi langsung ke memori untuk menghindari deteksi antivirus.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">nishang</div><div class="tool-desc">Koleksi script dan payload PowerShell untuk penetration testing dan offensive security — mencakup reverse shell, privilege escalation, credential harvesting, keylogger, dan persistence dalam satu framework PowerShell yang lengkap.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-<!-- Network Exploitation -->
-      <div class="tool-card"><div class="tool-name">responder</div><div class="tool-desc">LLMNR, NBT-NS, dan MDNS poisoner yang juga bertindak sebagai rogue server — menangkap hash NTLMv1/v2 dari mesin Windows di jaringan lokal secara otomatis dan bisa digunakan untuk relay attack ke target lain di jaringan.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">mitm6</div><div class="tool-desc">Eksploitasi IPv6 untuk serangan Man-in-the-Middle di jaringan Windows — memanfaatkan kelemahan default konfigurasi IPv6 pada Windows untuk mengarahkan traffic DNS dan melakukan NTLM relay attack ke domain controller.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">impacket-ntlmrelayx</div><div class="tool-desc">Tool relay serangan NTLM yang sangat powerful — menangkap autentikasi NTLM dari korban dan secara otomatis me-relay ke target lain untuk eksekusi perintah, dump SAM, atau akses SMB share tanpa perlu crack hash sama sekali.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">printerspoofer</div><div class="tool-desc">Eksploitasi kelemahan Windows Print Spooler untuk privilege escalation dari Service Account ke SYSTEM — sangat efektif di lingkungan Windows Server yang belum dipatch dan sering digunakan dalam fase post-exploitation setelah initial access.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">juicypotato</div><div class="tool-desc">Local privilege escalation tool untuk Windows — mengeksploitasi COM/DCOM dan token impersonation untuk eskalasi hak akses dari akun service seperti IIS atau SQL Server menjadi SYSTEM dalam hitungan detik.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">rottenpotato</div><div class="tool-desc">Teknik privilege escalation Windows klasik via token impersonation — mengeksploitasi kelemahan pada Windows Token untuk mendapatkan akses SYSTEM dari akun service yang terbatas, pendahulu dari JuicyPotato yang lebih modern.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-<!-- Web Exploitation -->
-      <div class="tool-card"><div class="tool-name">webshells</div><div class="tool-desc">Koleksi web shell dalam berbagai bahasa (PHP, ASP, ASPX, JSP, Perl) — digunakan setelah berhasil upload file berbahaya ke server untuk mendapatkan remote code execution dan kontrol penuh atas web server target.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">weevely</div><div class="tool-desc">Web shell PHP yang tersteganografi dan sulit dideteksi — komunikasi antara attacker dan shell diobfuskasi dalam header HTTP normal sehingga susah terdeteksi IDS/IPS, dilengkapi 30+ modul built-in untuk post-exploitation.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">laudanum</div><div class="tool-desc">Koleksi injectable web shell files dalam berbagai bahasa untuk digunakan saat penetration testing — menyediakan shell, file browser, proxy, dan reverse shell yang siap pakai dalam format PHP, ASP, ASPX, dan CFM.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      
-<!-- Fuzzing & Discovery -->
-      <div class="tool-card"><div class="tool-name">boofuzz</div><div class="tool-desc">Network protocol fuzzer generasi baru pengganti Sulley — mengirimkan data malformed secara sistematis ke protokol jaringan untuk menemukan bug crash, buffer overflow, dan kerentanan memori pada implementasi protokol target.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">spike</div><div class="tool-desc">Protocol fuzzer profesional berbasis C yang digunakan untuk menemukan kerentanan pada implementasi protokol jaringan — mendukung pembuatan template fuzzing custom untuk berbagai protokol biner dan teks seperti HTTP, FTP, dan SMTP.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-<!-- Specific CVE & Exploits -->
-      <div class="tool-card"><div class="tool-name">eternalblue-doublepulsar</div><div class="tool-desc">Implementasi exploit NSA EternalBlue (MS17-010) yang menarget kerentanan SMBv1 Windows — exploit yang sama digunakan oleh ransomware WannaCry untuk menyebar, sangat efektif terhadap sistem Windows yang belum dipatch.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">ms17-010</div><div class="tool-desc">Kumpulan script Python untuk eksploitasi kerentanan EternalBlue SMB — menyediakan berbagai implementasi exploit MS17-010 termasuk versi yang tidak memerlukan Metasploit dan bisa dijalankan langsung dari terminal Kali.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">log4shell-exploit</div><div class="tool-desc">Tool eksploitasi kerentanan Log4Shell (CVE-2021-44228) pada library Log4j Java — salah satu kerentanan paling kritis dalam sejarah yang memungkinkan Remote Code Execution hanya dengan mengirim string JNDI lookup ke aplikasi yang rentan.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">spring4shell</div><div class="tool-desc">Eksploitasi kerentanan Spring Framework (CVE-2022-22965) — memungkinkan Remote Code Execution pada aplikasi Spring MVC yang berjalan di JDK 9+ dengan mengeksploitasi data binding yang tidak aman pada parameter HTTP request.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-
-      <div class="tool-card"><div class="tool-name">proxyshell</div><div class="tool-desc">Rantai tiga kerentanan Microsoft Exchange Server (CVE-2021-34473, 34523, 31207) yang dikombinasikan untuk mencapai Remote Code Execution tanpa autentikasi — sangat berbahaya karena Exchange biasanya terekspos ke internet publik.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">exploitdb</div><div class="tool-desc">Arsip lokal resmi dari Exploit Database yang memuat puluhan ribu script eksploitasi yang dapat digunakan secara offline.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">linux-exploit-suggester</div><div class="tool-desc">Script yang menganalisis environment OS Linux untuk merekomendasikan daftar exploit kernel yang kemungkinan besar berhasil.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">windows-exploit-suggester</div><div class="tool-desc">Membandingkan patch level Windows dengan database kerentanan Microsoft untuk menyarankan privilege escalation exploit.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-
-      <div class="tool-card"><div class="tool-name">searchsploit</div><div class="tool-desc">CLI untuk mencari exploit di database Exploit-DB secara offline — menemukan PoC exploit untuk CVE tertentu.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">beef-xss</div><div class="tool-desc">Browser Exploitation Framework — mengontrol browser korban via XSS untuk melakukan serangan lebih lanjut dari sisi client.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">social-engineer-toolkit</div><div class="tool-desc">SET — framework untuk serangan social engineering: phishing, credential harvesting, spear-phishing email, dan payload delivery.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">armitage</div><div class="tool-desc">GUI untuk Metasploit Framework — visualisasi jaringan target, manajemen sesi, dan kolaborasi tim dalam penetration testing.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">veil</div><div class="tool-desc">Generator payload yang mampu bypass antivirus menggunakan berbagai teknik obfuscation dan enkripsi.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">shellter</div><div class="tool-desc">Dynamic shellcode injector untuk file PE Windows — menyuntikkan payload Metasploit ke dalam executable legitimate tanpa mengubah ukuran file untuk bypass antivirus.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">crackmapexec-smb</div><div class="tool-desc">Modul SMB CrackMapExec untuk eksploitasi lateral movement — otomasi credential testing, command execution, dan enumeration share di seluruh jaringan Windows.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">evil-ssdp</div><div class="tool-desc">Tool untuk membuat fake UPnP service melalui SSDP — menipu client Windows untuk mengautentikasi ke server attacker dan menangkap hash NTLMv2 secara otomatis.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">linikatz</div><div class="tool-desc">Implementasi Mimikatz untuk Linux — mengekstrak credential dari keychain Linux, credential cache Kerberos, dan berbagai penyimpanan credential pada sistem Linux modern.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">macro_pack</div><div class="tool-desc">Tool otomasi pembuatan payload Office macro berbahaya — menghasilkan dokumen Word, Excel, dan PowerPoint berisi macro yang di-obfuskasi untuk bypass antivirus dan keamanan email.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">ruler</div><div class="tool-desc">Tool eksploitasi Microsoft Exchange via protokol MAPI/HTTP — memanfaatkan aturan Outlook untuk mengeksekusi perintah di mesin korban tanpa memerlukan akses fisik ke endpoint.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">spoofcheck</div><div class="tool-desc">Tool pengecekan konfigurasi email spoofing — memverifikasi apakah domain target rentan terhadap email spoofing dengan menganalisis record SPF, DKIM, dan DMARC yang ada.</div><span class="tool-tag tag-analysis">Analysis</span></div>
-      <div class="tool-card"><div class="tool-name">luckystrike</div><div class="tool-desc">Generator payload Excel dan Word berbahaya berbasis COM — membuat dokumen Office dengan macro tersembunyi yang mengeksekusi payload saat dibuka tanpa peringatan keamanan.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-      <div class="tool-card"><div class="tool-name">msfvenom</div><div class="tool-desc">Generator payload Metasploit — membuat shellcode, executable, dan payload berbagai format untuk berbagai platform target.</div><span class="tool-tag tag-offensive">Offensive</span></div>
-    </div>
+<!-- 5. Exploitation Tools -->
+<div class="category" data-cat="exploitation">
+  <div class="cat-header" onclick="toggleCat(this)">
+    <span class="cat-icon">💉</span>
+    <span class="cat-title">Exploitation Tools</span>
+    <span class="cat-count">42</span>
+    <span class="cat-toggle open">▼</span>
   </div>
+  <div class="tools-grid">
+    <div class="tool-card"><div class="tool-name">metasploit</div><div class="tool-desc">Framework exploit terlengkap di dunia — database ribuan exploit, payload, auxiliary, dan post-exploitation module yang terus diupdate.</div><div class="tool-cmd">msfconsole -v</div><span class="tool-tag tag-offensive">Offensive</span></div>
+    <div class="tool-card"><div class="tool-name">routersploit</div><div class="tool-desc">Framework eksploitasi mirip Metasploit yang didedikasikan khusus untuk embedded devices, seperti router dan kamera CCTV.</div><div class="tool-cmd">rsf.py</div><span class="tool-tag tag-offensive">Offensive</span></div>
+    <div class="tool-card"><div class="tool-name">pocsuite3</div><div class="tool-desc">Framework pengembangan exploit open-source yang elegan, digunakan secara luas oleh tim security.</div><div class="tool-cmd">pocsuite --version</div><span class="tool-tag tag-offensive">Offensive</span></div>
+    <div class="tool-card"><div class="tool-name">sqlninja</div><div class="tool-desc">Eksploitasi SQL injection khusus untuk Microsoft SQL Server — mengotomasi teknik lanjutan seperti upload file, OS command execution, dan privilege escalation melalui celah SQLi di aplikasi web berbasis MSSQL.</div><div class="tool-cmd">sqlninja -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">ysoserial</div><div class="tool-desc">Generator payload Java deserialization — membuat payload berbahaya untuk mengeksploitasi kerentanan deserialisasi pada aplikasi Java seperti Jenkins, WebLogic, JBoss, dan framework berbasis Java lainnya.</div><div class="tool-cmd">java -jar ysoserial.jar</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">ysoserial.net</div><div class="tool-desc">Versi .NET dari ysoserial — generate payload deserialisasi untuk aplikasi berbasis .NET seperti ASP.NET, ViewState, dan berbagai formatter .NET yang rentan terhadap serangan deserialisasi objek.</div><div class="tool-cmd">ysoserial.exe --help</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">pwntools</div><div class="tool-desc">Framework CTF dan exploit development berbasis Python — menyediakan library lengkap untuk menulis exploit buffer overflow, ROP chain, format string, dan interaksi dengan binary secara programatik dari terminal Kali.</div><div class="tool-cmd">python3 -c "import pwn; print(pwn.__version__)"</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">ropper</div><div class="tool-desc">ROP (Return Oriented Programming) gadget finder — mencari gadget instruksi dalam binary untuk menyusun ROP chain yang digunakan dalam eksploitasi modern yang melewati proteksi NX/DEP pada aplikasi dan kernel.</div><div class="tool-cmd">ropper --file ./binary --search "pop rdi"</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">ropgadget</div><div class="tool-desc">Tool pencari ROP dan JOP gadget pada binary ELF, PE, Mach-O — menganalisis binary untuk menemukan urutan instruksi yang bisa dirantai menjadi payload eksploitasi tanpa membutuhkan kode shellcode baru.</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">one_gadget</div><div class="tool-desc">Mencari gadget satu instruksi di libc yang langsung menjalankan shell — mempercepat proses exploit development CTF dan binary exploitation dengan menemukan offset shell execution di library C secara otomatis.</div><div class="tool-cmd">one_gadget /lib/x86_64-linux-gnu/libc.so.6</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">checksec</div><div class="tool-desc">Menganalisis proteksi keamanan yang aktif pada binary — mendeteksi ada tidaknya ASLR, NX, PIE, stack canary, RELRO, dan FORTIFY sehingga pentester bisa menentukan teknik eksploitasi yang tepat sebelum menyerang.</div><div class="tool-cmd">checksec --file=/bin/ls</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">pattern_create / pattern_offset</div><div class="tool-desc">Utilitas dari Metasploit untuk membuat cyclic pattern dan menentukan offset tepat saat eksploitasi buffer overflow — membantu menemukan titik kontrol EIP/RIP secara presisi tanpa perlu perhitungan manual yang memakan waktu.</div><div class="tool-cmd">msf-pattern_create -l 100</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">shellnoob</div><div class="tool-desc">Toolkit untuk memudahkan penulisan dan konversi shellcode — mengkonversi antara format asm, hex, binary, dan C secara otomatis serta membantu debugging shellcode selama proses exploit development di berbagai arsitektur.</div><div class="tool-cmd">shellnoob --help</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">donut</div><div class="tool-desc">Generator shellcode dari executable .NET, PE, VBScript, dan JScript — mengkonversi payload apapun menjadi shellcode yang bisa diinjeksikan ke proses lain untuk bypass antivirus dan eksekusi in-memory tanpa menyentuh disk.</div><div class="tool-cmd">donut -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">sharpshooter</div><div class="tool-desc">Framework pembuatan payload yang memanfaatkan teknik DotNetToJScript untuk eksekusi kode .NET melalui berbagai format file seperti HTA, JS, VBS, dan WSF — efektif untuk bypass application whitelisting di lingkungan Windows.</div><div class="tool-cmd">python Sharpshooter.py -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">unicorn</div><div class="tool-desc">Tool sederhana namun powerful untuk mengkonversi shellcode Metasploit atau custom menjadi serangan PowerShell — menggunakan teknik PowerShell downgrade attack dan injeksi langsung ke memori untuk menghindari deteksi antivirus.</div><div class="tool-cmd">python unicorn.py</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">nishang</div><div class="tool-desc">Koleksi script dan payload PowerShell untuk penetration testing dan offensive security — mencakup reverse shell, privilege escalation, credential harvesting, keylogger, dan persistence dalam satu framework PowerShell yang lengkap.</div><div class="tool-cmd">Import-Module .\nishang.psm1</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">responder</div><div class="tool-desc">LLMNR, NBT-NS, dan MDNS poisoner yang juga bertindak sebagai rogue server — menangkap hash NTLMv1/v2 dari mesin Windows di jaringan lokal secara otomatis dan bisa digunakan untuk relay attack ke target lain di jaringan.</div><div class="tool-cmd">sudo responder -I eth0 -A</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">mitm6</div><div class="tool-desc">Eksploitasi IPv6 untuk serangan Man-in-the-Middle di jaringan Windows — memanfaatkan kelemahan default konfigurasi IPv6 pada Windows untuk mengarahkan traffic DNS dan melakukan NTLM relay attack ke domain controller.</div><div class="tool-cmd">mitm6 -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">impacket-ntlmrelayx</div><div class="tool-desc">Tool relay serangan NTLM yang sangat powerful — menangkap autentikasi NTLM dari korban dan secara otomatis me-relay ke target lain untuk eksekusi perintah, dump SAM, atau akses SMB share tanpa perlu crack hash sama sekali.</div><div class="tool-cmd">impacket-ntlmrelayx -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">printerspoofer</div><div class="tool-desc">Eksploitasi kelemahan Windows Print Spooler untuk privilege escalation dari Service Account ke SYSTEM — sangat efektif di lingkungan Windows Server yang belum dipatch dan sering digunakan dalam fase post-exploitation setelah initial access.</div><div class="tool-cmd">PrintSpoofer.exe -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">juicypotato</div><div class="tool-desc">Local privilege escalation tool untuk Windows — mengeksploitasi COM/DCOM dan token impersonation untuk eskalasi hak akses dari akun service seperti IIS atau SQL Server menjadi SYSTEM dalam hitungan detik.</div><div class="tool-cmd">JuicyPotato.exe -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">rottenpotato</div><div class="tool-desc">Teknik privilege escalation Windows klasik via token impersonation — mengeksploitasi kelemahan pada Windows Token untuk mendapatkan akses SYSTEM dari akun service yang terbatas, pendahulu dari JuicyPotato yang lebih modern.</div><div class="tool-cmd">RottenPotato.exe</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">webshells</div><div class="tool-desc">Koleksi web shell dalam berbagai bahasa (PHP, ASP, ASPX, JSP, Perl) — digunakan setelah berhasil upload file berbahaya ke server untuk mendapatkan remote code execution dan kontrol penuh atas web server target.</div><div class="tool-cmd">ls -la /usr/share/webshells/</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">weevely</div><div class="tool-desc">Web shell PHP yang tersteganografi dan sulit dideteksi — komunikasi antara attacker dan shell diobfuskasi dalam header HTTP normal sehingga susah terdeteksi IDS/IPS, dilengkapi 30+ modul built-in untuk post-exploitation.</div><div class="tool-cmd">weevely --help</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">laudanum</div><div class="tool-desc">Koleksi injectable web shell files dalam berbagai bahasa untuk digunakan saat penetration testing — menyediakan shell, file browser, proxy, dan reverse shell yang siap pakai dalam format PHP, ASP, ASPX, dan CFM.</div><div class="tool-cmd">ls -la /usr/share/laudanum/</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">boofuzz</div><div class="tool-desc">Network protocol fuzzer generasi baru pengganti Sulley — mengirimkan data malformed secara sistematis ke protokol jaringan untuk menemukan bug crash, buffer overflow, dan kerentanan memori pada implementasi protokol target.</div><div class="tool-cmd">boofuzz -h</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">spike</div><div class="tool-desc">Protocol fuzzer profesional berbasis C yang digunakan untuk menemukan kerentanan pada implementasi protokol jaringan — mendukung pembuatan template fuzzing custom untuk berbagai protokol biner dan teks seperti HTTP, FTP, dan SMTP.</div><div class="tool-cmd">generic_chunk_fuzz</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">eternalblue-doublepulsar</div><div class="tool-desc">Implementasi exploit NSA EternalBlue (MS17-010) yang menarget kerentanan SMBv1 Windows — exploit yang sama digunakan oleh ransomware WannaCry untuk menyebar, sangat efektif terhadap sistem Windows yang belum dipatch.</div><div class="tool-cmd">msfconsole -x "use exploit/windows/smb/ms17_010_eternalblue; show options"</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">ms17-010</div><div class="tool-desc">Kumpulan script Python untuk eksploitasi kerentanan EternalBlue SMB — menyediakan berbagai implementasi exploit MS17-010 termasuk versi yang tidak memerlukan Metasploit dan bisa dijalankan langsung dari terminal Kali.</div><div class="tool-cmd">python checker.py [target_ip]</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">log4shell-exploit</div><div class="tool-desc">Tool eksploitasi kerentanan Log4Shell (CVE-2021-44228) pada library Log4j Java — salah satu kerentanan paling kritis dalam sejarah yang memungkinkan Remote Code Execution hanya dengan mengirim string JNDI lookup ke aplikasi yang rentan.</div><div class="tool-cmd">python3 log4j-scan.py -u http://target.local</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">spring4shell</div><div class="tool-desc">Eksploitasi kerentanan Spring Framework (CVE-2022-22965) — memungkinkan Remote Code Execution pada aplikasi Spring MVC yang berjalan di JDK 9+ dengan mengeksploitasi data binding yang tidak aman pada parameter HTTP request.</div><div class="tool-cmd">python3 spring4shell_scan.py --url http://target.local</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">proxyshell</div><div class="tool-desc">Rantai tiga kerentanan Microsoft Exchange Server (CVE-2021-34473, 34523, 31207) yang dikombinasikan untuk mencapai Remote Code Execution tanpa autentikasi — sangat berbahaya karena Exchange biasanya terekspos ke internet publik.</div><div class="tool-cmd">python3 proxyshell_checker.py -u https://exchange.local</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">exploitdb</div><div class="tool-desc">Arsip lokal resmi dari Exploit Database yang memuat puluhan ribu script eksploitasi yang dapat digunakan secara offline.</div><div class="tool-cmd">searchsploit --update</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">linux-exploit-suggester</div><div class="tool-desc">Script yang menganalisis environment OS Linux untuk merekomendasikan daftar exploit kernel yang kemungkinan besar berhasil.</div><div class="tool-cmd">./linux-exploit-suggester.sh</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">windows-exploit-suggester</div><div class="tool-desc">Membandingkan patch level Windows dengan database kerentanan Microsoft untuk menyarankan privilege escalation exploit.</div><div class="tool-cmd">python wes.py systeminfo.txt</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">searchsploit</div><div class="tool-desc">CLI untuk mencari exploit di database Exploit-DB secara offline — menemukan PoC exploit untuk CVE tertentu.</div><div class="tool-cmd">searchsploit apache 2.4</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">beef-xss</div><div class="tool-desc">Browser Exploitation Framework — mengontrol browser korban via XSS untuk melakukan serangan lebih lanjut dari sisi client.</div><div class="tool-cmd">sudo beef-xss</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">social-engineer-toolkit</div><div class="tool-desc">SET — framework untuk serangan social engineering: phishing, credential harvesting, spear-phishing email, dan payload delivery.</div><div class="tool-cmd">sudo setoolkit</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">armitage</div><div class="tool-desc">GUI untuk Metasploit Framework — visualisasi jaringan target, manajemen sesi, dan kolaborasi tim dalam penetration testing.</div><div class="tool-cmd">sudo armitage</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">veil</div><div class="tool-desc">Generator payload yang mampu bypass antivirus menggunakan berbagai teknik obfuscation dan enkripsi.</div><div class="tool-cmd">veil</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">shellter</div><div class="tool-desc">Dynamic shellcode injector untuk file PE Windows — menyuntikkan payload Metasploit ke dalam executable legitimate tanpa mengubah ukuran file untuk bypass antivirus.</div><div class="tool-cmd">shellter</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">crackmapexec-smb</div><div class="tool-desc">Modul SMB CrackMapExec untuk eksploitasi lateral movement — otomasi credential testing, command execution, dan enumeration share di seluruh jaringan Windows.</div><div class="tool-cmd">crackmapexec smb --help</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">evil-ssdp</div><div class="tool-desc">Tool untuk membuat fake UPnP service melalui SSDP — menipu client Windows untuk mengautentikasi ke server attacker dan menangkap hash NTLMv2 secara otomatis.</div><div class="tool-cmd">python3 evil_ssdp.py -i eth0</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">linikatz</div><div class="tool-desc">Implementasi Mimikatz untuk Linux — mengekstrak credential dari keychain Linux, credential cache Kerberos, dan berbagai penyimpanan credential pada sistem Linux modern.</div><div class="tool-cmd">./linikatz.sh</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">macro_pack</div><div class="tool-desc">Tool otomasi pembuatan payload Office macro berbahaya — menghasilkan dokumen Word, Excel, dan PowerPoint berisi macro yang di-obfuskasi untuk bypass antivirus dan keamanan email.</div><div class="tool-cmd">macro_pack --help</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">ruler</div><div class="tool-desc">Tool eksploitasi Microsoft Exchange via protokol MAPI/HTTP — memanfaatkan aturan Outlook untuk mengeksekusi perintah di mesin korban tanpa memerlukan akses fisik ke endpoint.</div><div class="tool-cmd">ruler --help</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">spoofcheck</div><div class="tool-desc">Tool pengecekan konfigurasi email spoofing — memverifikasi apakah domain target rentan terhadap email spoofing dengan menganalisis record SPF, DKIM, dan DMARC yang ada.</div><div class="tool-cmd">python spoofcheck.py example.com</div><span class="tool-tag tag-analysis">Analysis</span></div>
+
+    <div class="tool-card"><div class="tool-name">luckystrike</div><div class="tool-desc">Generator payload Excel dan Word berbahaya berbasis COM — membuat dokumen Office dengan macro tersembunyi yang mengeksekusi payload saat dibuka tanpa peringatan keamanan.</div><div class="tool-cmd">luckystrike.ps1</div><span class="tool-tag tag-offensive">Offensive</span></div>
+
+    <div class="tool-card"><div class="tool-name">msfvenom</div><div class="tool-desc">Generator payload Metasploit — membuat shellcode, executable, dan payload berbagai format untuk berbagai platform target.</div><div class="tool-cmd">msfvenom --list formats</div><span class="tool-tag tag-offensive">Offensive</span></div>
+  </div>
+</div>
+
 
   <!-- 6. Vulnerability Analysis -->
   <div class="category" data-cat="vuln">
