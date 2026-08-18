@@ -1,6 +1,6 @@
 
   const VALID_USERNAME = "Admin";   // ← GANTI USERNAME DI SINI
-  const VALID_PASSWORD = "Fsociety"; 
+  const VALID_PASSWORD = "191007"; 
     // GANTI PASSWORD DI SINI
   const MAIN_PAGE = "main-page.html";
 
